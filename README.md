@@ -3,8 +3,8 @@
 # org.openhab.persistence.caldav
 A CalDav persistence implementation for openHAB
 
-
-<img src="https://raw.githubusercontent.com/tseiman/org.openhab.persistence.caldav/master/images/CalDavBinding.png" alt="CalDav openHAB binding" style="width:300;">
+<hr />
+<img src="https://raw.githubusercontent.com/tseiman/org.openhab.persistence.caldav/master/images/CalDavBinding.png" alt="CalDav openHAB binding" style="width:400;">
 
 
 ## Content
