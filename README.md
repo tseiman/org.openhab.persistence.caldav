@@ -32,8 +32,9 @@ a home automation environment.
 --> to all who have contributed to [GCal](https://github.com/openhab/openhab/wiki/GCal-Binding) Persistence, as this plugin is following GCal implementation and configuration
 
 ## Notice
-- CalDav Persistence binding is beta and just tested on openHAB 1.8, on a few systems and needs more review
-- CalDav Persistence binding is not fully integrated into openHAB's build system, for org.openhab.persistence.caldav the maven build is disfunctional. You are wellcome to contribute here ...
+- CalDAV Persistence binding is beta and just tested on openHAB 1.8, on a few systems and needs more review
+- CalDAV Persistence binding is not fully integrated into openHAB's build system, for org.openhab.persistence.caldav the maven build is disfunctional. You are wellcome to contribute here ...
+- CalDAV persistence is part of org.openhab.io.persistence - which needs to be installed as well !
 
 ## Compatibility
 - openHAB 1.8 (tested)
@@ -51,6 +52,7 @@ Please contact over openHAB Google group if you like to share your testing expir
   - or Apple's [Calendar Server](http://calendarserver.org) (un-tested)
 - You are able to access this calender over http(s) via any kind of CalDAV application
 - in case of using certificates (recommended) you have server certificate and eventually CA certificate at hand
+- You have downloaded and configured org.openhab.io.caldav binding
 - You have downloaded and configured org.openhab.persistence.caldav binding
 - run openhab eventually in debug mode to see the persistence service working
 - the user you'll configure to caldav-persistence will need read/write rights to the CalDAV collection/calendar on CalDAV server
