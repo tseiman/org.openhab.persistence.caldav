@@ -117,14 +117,14 @@ or just
     send Pump_Garden ON
 
 ## Persistence
-The CalDAV persistence bundle can be used to realize a simple but effective Presence Simulation feature (thanks Ralf for providing the concept). Every single change of an item that belongs to a certain group is posted as new calendar entry in the future. By default each entry is posted with an offset of 14 days (If you'd like to change the offset please change the parameter `caldav-persistence:offset` in your `openhab.cfg`). Each calendar entry looks like the following:
+The CalDAV persistence bundle can be used to realize a simple but effective Presence Simulation feature (thanks to GCal contributors, providing the concept). Every single change of an item that belongs to a certain group is posted as new calendar entry in the future. By default each entry is posted with an offset of 14 days (If you'd like to change the offset please change the parameter `caldav-persistence:offset` in your `openhab.cfg`). Each calendar entry looks like the following:
 
 - title: `[PresenceSimulation] <itemname>`
 - content: `> if (PresenceSimulation.state == ON) sendCommand(<itemname>,<value>)`
 
 - Make sure that the binding org.openhab.persistence.caldav is installed and configured (see above)
 - make sure your items file contains items that belong to a group which is configured in `.persist` file. In this example (following GCal configuration) it is  `PresenceSimulationGroup` - if you would like to change the group name change it at `caldav-persistence.persist`.
-- make sure your items file contains an (Switch) item called `PresenceSimulation` which is referred by the scripts executed at a certain point in time - if you would like to change the group name please change the parameter `gcal-persistence:executescript` in your `openhab.cfg`.
+- make sure your items file contains an (Switch) item called `PresenceSimulation` which is referred by the scripts executed at a certain point in time - if you would like to change the group name please change the parameter `caldav-persistence:executescript` in your `openhab.cfg`.
 - make sure the referenced CalDAV calendar is writeable by the given user
 
 Note: you also need to configure the caldav-io binding (CalDAV Calendar Configuration in 'openhab.cfg') to be able to read the entries from the calendar and act on it!
