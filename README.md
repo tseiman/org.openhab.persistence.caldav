@@ -1,9 +1,4 @@
 
-<style>
-table {
-  fonst-size: 0.5em;
-}
-</style>
 
 # org.openhab.persistence.caldav
 A CalDav persistence implementation for openHAB
