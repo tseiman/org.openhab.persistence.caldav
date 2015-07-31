@@ -72,7 +72,7 @@ Following configuration entries are supported for openhab.cfg:
 <tr><td><sub>caldav-persistence:url</sub></td><td><sub>no</sub></td><td>-</td><td><sub>String</sub></td><td><sub>URL path to the CalDAV calendar collection which is used for home automation</sub></td><td><sub>/caldav.php/Heimauto/Planer/</sub></td></tr>
 <tr><td><sub>caldav-persistence:offset</sub></td><td><sub>yes</sub></td><td><sub>14</sub></td><td><sub>Int (DAYs)</sub></td><td><sub>The offset in DAYs, in advance where the persistence service will store the actual events captured from openHAB</sub></td><td><sub>12</sub></td></tr>
 <tr><td><sub>caldav-persistence:upload-interval</sub></td><td><sub>yes</sub></td><td><sub>10</sub></td><td><sub>Int (SECONDS)</sub></td><td><sub>The upload interval in SECONDS default should be OK - however this might be used to optimize load on CalDAv Server</sub></td><td><sub> 30</sub></td></tr>
-<tr><td><sub>caldav-persistence:executescript</sub></td><td><sub>yes</sub></td><td><sub>&gt; if (PresenceSimulation.state == ON) %s.sendCommand(%s)</sub></td><td><sub>String</sub></td><td><sub>changes the  of the script of persistence, especally the name of the Switch item which is per default `PresenceSimulation` can be changed</sub></td><td><sub>&gt; if (SomSwitchItemName.state == ON) %s.sendCommand(%s)</sub></td></tr>
+<tr><td><sub>caldav-persistence:executescript</sub></td><td><sub>yes</sub></td><td><sub>&gt; if (PresenceSimulation.state == ON) %s.sendCommand(%s)</sub></td><td><sub>String</sub></td><td><sub>changes the script for persistence execution, especally the name of the Switch item which is per default `PresenceSimulation` can be changed</sub></td><td><sub>&gt; if (SomeSwitchItemName.state == ON) %s.sendCommand(%s)</sub></td></tr>
 </table>
 
 
