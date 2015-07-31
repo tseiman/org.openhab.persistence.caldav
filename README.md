@@ -13,6 +13,9 @@ A CalDav persistence implementation for openHAB
 - [Preconditions] (#preconditions)
 - [Install] (#install)
 - [openhab.cfg Example] (#openhabcfg-example)
+- [Calendar Event Configuration] (#calendar-event-configuration)
+- [Persistence] (#persistence)
+- [Solving caldav persistence errors] (#solving-caldav-persistence-errors)
 
 
 ## Introduction
@@ -50,7 +53,7 @@ Please contact over openHAB Google group if you like to share your testing expir
 - run openhab eventually in debug mode to see the persistence service working
 
 ## Install
-At the moment there are precompiled exports from eclipse available [download org.openhab.persistence.caldav_XXXX.jar] (https://raw.githubusercontent.com/tseiman/org.openhab.persistence.caldav/master/build/org.openhab.persistence.caldav_1.8.0.201507300342.jar) and place it in the OPENHAB_ROOT/addons folder.
+At the moment there are precompiled exports from eclipse available [download org.openhab.persistence.caldav_XXXX.jar] (https://raw.githubusercontent.com/tseiman/org.openhab.persistence.caldav/master/build/org.openhab.persistence.caldav_1.8.0.201507300342.jar) and place it in the `OPENHAB_ROOT/addons` folder.
 
 ## Configure
 Following configuration entries are supported for openhab.cfg:
