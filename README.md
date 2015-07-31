@@ -34,7 +34,7 @@ a home automation environment.
 ## Notice
 - CalDAV Persistence binding is beta and just tested on openHAB 1.8, on a few systems and needs more review
 - CalDAV Persistence binding is not fully integrated into openHAB's build system, for org.openhab.persistence.caldav the maven build is disfunctional. You are wellcome to contribute here ...
-- CalDAV persistence is part of org.openhab.io.persistence - which needs to be installed as well !
+- CalDAV persistence is part of org.openhab.io.caldav - which needs to be installed as well !
 
 ## Compatibility
 - openHAB 1.8 (tested)
