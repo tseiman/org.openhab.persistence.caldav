@@ -51,6 +51,7 @@ Please contact over openHAB Google group if you like to share your testing expir
 - in case of using certificates (recommended) you have server certificate and eventually CA certificate at hand
 - You have downloaded and configured org.openhab.persistence.caldav binding
 - run openhab eventually in debug mode to see the persistence service working
+- the user you'll configure to caldav-persistence will have read/write rights to the CalDAV collection/calendar on CalDAV server
 
 ## Install
 At the moment there are precompiled exports from eclipse available [download org.openhab.persistence.caldav_XXXX.jar] (https://raw.githubusercontent.com/tseiman/org.openhab.persistence.caldav/master/build/org.openhab.persistence.caldav_1.8.0.201507300342.jar) and place it in the `OPENHAB_ROOT/addons` folder.
