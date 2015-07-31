@@ -1,3 +1,10 @@
+
+<style>
+table {
+  fonst-size: 0.5em;
+}
+</style>
+
 # org.openhab.persistence.caldav
 A CalDav persistence implementation for openHAB
 
@@ -59,18 +66,20 @@ At the moment there are precompiled exports from eclipse available [download org
 ## Configure
 Following configuration entries are supported for openhab.cfg:
 
-           Entry                | Optional | Default |   Type   |                  Description                      | Example
-------------------------------- | -------- | ------- | -------- | ------------------------------------------------- | --------
-caldav-persistence:username     |    no    |    -    |  String  | gives the username to login to the CalDAV server  | foo
-caldav-persistence:password     |    no    |    -    |  String  | gives the password to the user for CalDAV server  | bar
-caldav-persistence:host         |    no    |    -    |  String  | hostname or IP of the caldav server               |   caldavserver.intranet.local
-| caldav-persistence:tls | yes | true | boolean | disables or enables TLS/SSL usage (recommended not to disable) | true
-| caldav-persistence:strict-tls | yes | true | boolean | disables certifacate check, this might be used if certificates cannot be verified, this is a dangerous option as it voids a supposedly secure connection and gives free way to Man.In.Middle attacks, however - this optin might be used for debugging | false
-| caldav-persistence:port | yes | if tls =443 else =80 | Int | Sets the port of the caldav HTTP(S) server to a non default. Attention - if enable TLS and set it to e.g. 80 (unsecure HTTP port) this might cause a error | 8080 | 
-| caldav-persistence:url | no | - | String | URL path to the CalDAV calendar collection which is used for home automation  | /caldav.php/Heimauto/Planer/ |
-| caldav-persistence:offset | yes | 14 | Int (DAYs) | The offset in DAYs, in advance where the persistence service will store the actual events captured from openHAB | 12 |
-| caldav-persistence:upload-interval | yes | 10 | Int (SECONDS) | The upload interval in SECONDS default should be OK - however this might be used to optimize load on CalDAv Server | 30 |
-| caldav-persistence:executescript | yes | > if (PresenceSimulation.state == ON) %s.sendCommand(%s) | String | changes the  of the script of persistence, especally the name of the Switch item which is per default `PresenceSimulation` can be changed | > if (SomSwitchItemName.state == ON) %s.sendCommand(%s) |
+<table>
+<tr><th><sub>Entry</sub></th><th><sub>Optional</sub></th><th><sub>Default</sub></th><th><sub>Type</sub></th><th><sub>Description</sub></th><th><sub>Example</sub></th></tr>
+<tr><td><sub>caldav-persistence:username</sub></td><td><sub>no</sub></td><td>-</td><td><sub>String</sub></td><td><sub>gives the username to login to the CalDAV server</sub></td><td><sub>foo</sub></td></tr>
+<tr><td><sub>caldav-persistence:password</sub></td><td><sub>no</sub></td><td>-</td><td><sub>String</sub></td><td><sub>gives the password to the user for CalDAV server</sub></td><td><sub>bar</sub></td></tr>
+<tr><td><sub>caldav-persistence:host</sub></td><td><sub>no</sub></td><td>-</td><td><sub>String</sub></td><td><sub>hostname or IP of the caldav server</sub></td><td><sub>caldavserver.intranet.local</sub></td></tr>
+<tr><td><sub>caldav-persistence:tls</sub></td><td><sub>yes</sub></td><td><sub>true</sub></td><td><sub>boolean</sub></td><td><sub>disables or enables TLS/SSL usage (recommended not to disable)</sub></td><td><sub>true</sub></td></tr>
+<tr><td><sub>caldav-persistence:strict-tls</sub></td><td><sub>yes</sub></td><td><sub>true</sub></td><td><sub>boolean</sub></td><td><sub>disables certifacate check, this might be used if certificates cannot be verified, this is a dangerous option as it voids a supposedly secure connection and gives free way to Man.In.Middle attacks, however - this optin might be used for debugging</sub></td><td><sub>false</sub></td></tr>
+<tr><td><sub>caldav-persistence:port</sub></td><td><sub>yes</sub></td><td><sub>if tls =443 else =80</sub></td><td><sub>Int</sub></td><td><sub>Sets the port of the caldav HTTP(S) server to a non default. Attention - if enable TLS and set it to e.g. 80 (unsecure HTTP port) this might cause a error</sub></td><td><sub>8080</sub></td></tr>
+<tr><td><sub>caldav-persistence:url</sub></td><td><sub>no</sub></td><td>-</td><td><sub>String</sub></td><td><sub>URL path to the CalDAV calendar collection which is used for home automation</sub></td><td><sub>/caldav.php/Heimauto/Planer/</sub></td></tr>
+<tr><td><sub>caldav-persistence:offset</sub></td><td><sub>yes</sub></td><td><sub>14</sub></td><td><sub>Int (DAYs)</sub></td><td><sub>The offset in DAYs, in advance where the persistence service will store the actual events captured from openHAB</sub></td><td><sub>12</sub></td></tr>
+<tr><td><sub>caldav-persistence:upload-interval</sub></td><td><sub>yes</sub></td><td><sub>10</sub></td><td><sub>Int (SECONDS)</sub></td><td><sub>The upload interval in SECONDS default should be OK - however this might be used to optimize load on CalDAv Server</sub></td><td><sub> 30</sub></td></tr>
+<tr><td><sub>caldav-persistence:executescript</sub></td><td><sub>yes</sub></td><td><sub>&gt; if (PresenceSimulation.state == ON) %s.sendCommand(%s)</sub></td><td><sub>String</sub></td><td><sub>changes the  of the script of persistence, especally the name of the Switch item which is per default `PresenceSimulation` can be changed</sub></td><td><sub>&gt; if (SomSwitchItemName.state == ON) %s.sendCommand(%s)</sub></td></tr>
+</table>
+
 
 
 ## openhab.cfg Example
