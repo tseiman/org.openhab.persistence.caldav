@@ -1,6 +1,21 @@
-## org.openhab.persistence.caldav
+# org.openhab.persistence.caldav
 A CalDav persistence implementation for openHAB
+
+
 <img src="https://raw.githubusercontent.com/tseiman/org.openhab.persistence.caldav/master/images/CalDavBinding.png" alt="CalDav openHAB binding" style="width:300;">
+
+
+## Content
+- [Introduction] (#introduction)
+- [Thanks] (#thanks)
+- [Notice] (#notice)
+- [Compatibility] (#compatibility)
+- [Preconditions] (#preconditions)
+- [Install] (#install)
+- [openhab.cfg Example] (#openhabcfg-example)
+
+## Configure
+
 ## Introduction
 CalDav persistence binding implements the same functionality as the openHAB GCal binding but connects 
 instead to Google Calendar to any CalDAV enabled calendar server. At the moment it is used in a very similar 
